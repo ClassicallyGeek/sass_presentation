@@ -1,0 +1,11 @@
+@font-face {
+	font-family: dusty;
+	src: url("../fonts/dusty.ttf");
+}
+
+.reveal {
+	.emph {
+		padding: 0 10px;
+		font-family: dusty;
+	}
+}
