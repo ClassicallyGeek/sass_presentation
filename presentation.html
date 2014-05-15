@@ -116,8 +116,26 @@
 					URL-Helpers
 				</section>
 				<section>
-					<!--TODO -->
-					Example
+				<aside class="notes">
+					These url helpers isolate your stylesheets from environmental differences. They allow you to write the same stylesheets and use them locally without a web server, and then change them to be using asset hosts in production.
+
+					They might also insulate you against some code reorganization changes.
+				</aside>
+				<img class="heart_break_img" src="http://media.giphy.com/media/SIPIe590rx6iA/giphy.gif">
+				<p class="heart_break_words"><span class="emph">Seperate</span> your stylesheets from your environment.</p>
+				</section>
+				<section>
+				<p>Your config.rb file will set up the path to image assests.</p>
+					<pre><code>
+images_dir = "image"
+					</code></pre>
+					<p>And in your SCSS file you can now use "image-url" helper</p>
+					<pre><code>
+.sca-credit-card-img {
+	background: image-url('creditcard.svg') right no-repeat;
+	background-size: contain;
+}
+					</code></pre>
 				</section>
 			</section>
 			<section>
