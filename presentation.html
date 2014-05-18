@@ -42,13 +42,112 @@
 			</section>
 			<!-- Section 1: Why Convert -->
 			<section>
+				<section>
 				<h3>Why Use a <span class="emph">Pre-processor?</span></h3>
-				<!--Patty-->
+				</section>
+				<section>
+					<h3>Pros:</h3>
+					<ul>
+						<li>
+							It will make your CSS DRY (Code reuse across multiple projects)
+						</li>
+						<li>
+							Maintainability
+						</li>
+						<li>
+							Organized
+						</li>
+						<li>
+							Saves you time (mixins, variables, reduced redundancy)
+						</li>
+						<li>
+							Frameworks (level up your CSS, compass) 
+						</li>
+					</ul> 					
+				</section>
+				<section>
+					<h3> Cons: </h3>
+					<ul>
+						<li>
+							Time
+						</li>
+						<li>
+							Entire team needs to be onboard and learn
+						</li>
+					</ul>
+				</section>
 			</section>
-			<!-- Section 2: Why SASS Why SCSS -->
-				<!--Patty-->
 			<section>
+				<section>
 				<h3>Why <span class="emph">SASS</span> and moreso why <span class="emph">SCSS</span></h3>
+				</section>
+				<section>
+					<h3>SASS</h3>
+					<ul>
+						<li>
+							Indented syntax of SASS was inherited from HAML
+						</li>
+						<li>
+							SASS syntax is more concise. (@include vs +)
+						</li>
+						<li>
+							SASS doesn't complain about missing semi-colons
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>EXAMPLE</h3>
+					<pre>
+						<code>
+							=border-radius($radius)
+	  -webkit-border-radius: $radius
+	  -moz-border-radius:    $radius
+	  -ms-border-radius:     $radius
+	  border-radius:         $radius
+
+	.box
+	  +border-radius(10px)
+						</code>
+					</pre>
+				</section> 
+				<section>
+					<h3> SCSS </h3>
+					<ul>
+						<li>
+							Superset of CSS. Contains all the features of CSS and features of SASS as well
+						</li>
+						<li>
+							encourages proper nesting of rules
+						</li>
+						<li>
+							encourages more modular code with @extend
+						</li>
+						<li>
+							existing tools often work wiht SCSS
+						</li>
+						<li>
+							integration with an existing CSS codebase is much easier
+						</li>
+						<li>
+							SCSS provides a much lower barrier to entry
+						</li>
+					</ul> 
+				</section>
+				<section>
+					<h3>EXAMPLE</h3>
+					<pre>
+						<code>
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { @include border-radius(10px); }
+						</code>
+					</pre>
+				</section>
 			</section>
 			<!-- Section 3: Why not use an automatic conversion tool? -->
 			<section>
@@ -64,9 +163,70 @@
 					Leveraging @import "modularized" maintainability
 				</section>
 				<section>
-					<!-- TODO -->
-					<!--Patty-->
-					Example
+					<h3>Use Partials</h3>
+					<!-- TODO: elaborate more on this, PC -->					
+					<aside class="notes">
+						With traditional CSS, modularisation is implemented through classes and ids but SASS allows us to take this idea one step further through the use of functions and partials.
+
+						  - The idea here is that each module/action within the app has their own SASS file.
+						  - The idea is that anything that can made modular should be poosed int a partial so it can be reused anywhere. 
+						  - Inside which only partials and mixins needed for taht module will be imported. Similar to a well structured webapp where only the required functions and classes are imported so performance is optimised.
+					</aside>
+				</section>
+				<section>
+					<h3> Structure </h3>
+					<pre>
+						<code>
+/web/sass
+  ->home.scss
+  ->articlesSelected.scss
+  ->articlesLanding.scss
+/web/sass/mixins
+  ->_colours.scss
+  ->_typography.scss
+  ->_layout.scss
+/web/sass/partials
+  ->_base.scss
+  ->_reset.scss
+  ->_layout.scss
+  ->_buttons.scss
+  ->_comments.scss
+  ->_tooltip.scss
+						</code>
+					</pre>
+					<aside class="notes">
+						PARTIALS:
+
+						you can create partial SASS files that contain little snippets of CSS taht you can include in other SASS files. This is 
+						a great way to modularize your CSS and help keep thigns easier to maintain. A partial is simply a SASS file named with a 
+						leading underscore. The underscore lets SASS know that the file is only a partial file and that it should not be
+						generated into a CSS file. SASS partials are used with the @import directive.
+					</aside>
+				</section>
+				<section>
+					<h3>@Import</h3>
+					<pre>
+						<code>
+@import "mixins/colors";
+@import "mixins/typography";
+@import "mixins/functions";
+@import "partials/reset";
+@import "partials/base";
+@import "partials/layout";
+@import "partials/buttons";
+						</code>
+					</pre>
+					<aside class="notes">
+
+						IMPORT: 
+
+						CSS has an import ption that lets you split your CSS into smaller, more maintainable portions. The only drawback is that each
+						time you use @imporrt in CSS it creates another HTTP request. SASS bulds on top of the current CSS @import but instead of
+						requiring an HTTP request, SASS will take the file you want to import and combine it with the file you're importing into
+						so you can serve a single CSS file to the web broweser.
+
+						NOTE to research: SASS comes loaded with much more features like if, for loops, @debug, @warn, @while etc,  <-- eh?
+					</aside>
 				</section>
 			</section>
 			<section>
@@ -80,12 +240,57 @@
 			</section>
 			<section>
 				<section>
-					The compass watch config
-					<!--Patty-->
+					<h3>Compass </h3>
+						<ul>
+							<li>
+								create (create a new compass project)
+							</li>
+							<li>
+								init (initialize an existing project to work with compass)
+							</li>
+							<li>
+								install (install a pattern from an extension into a project)
+							</li>
+							<li>
+								compile (compile the project's sass files into CSS)
+							</li>
+							<li>
+								watch (watch the project for changes and compile whenever it does)
+							</li>
+							<li>
+								config (emit a configuration file at the location specified)
+							</li>
+							<li>
+								validate (validate the generated CSS)
+							</li>
+						</ul>
+					<!--4. Patty-->
 				</section>
 				<section>
-					<!-- TODO -->
-					Example
+					<h3>Example</h3>
+					<pre>
+						<code>
+							# Require any additional compass plugins here.
+
+# Set this to the root of your project when deployed:
+http_path = "../"
+css_dir = "style"
+sass_dir = "sass"
+images_dir = "image"
+javascripts_dir = "javascripts"
+
+# output_style = :expanded or :nested or :compact or :compressed
+output_style = :compressed
+
+# To enable relative paths to assets via compass helper functions.
+# relative_assets = true
+
+line_comments = false
+						</code>
+					</pre>
+				</section>
+				<section>
+					TODO: some good ol' compass mixins examples 
 				</section>
 			</section>
 			<!-- Section: 5: First Pass -->
@@ -103,12 +308,25 @@
 			</section>
 			<section>
 				<section>
-					Variables: Colors, Fonts, etc.
+					<h3> Variables: Colors, Fonts, etc. </h3>
 				</section>
 				<section>
-					<!--Patty-->
-					<!-- TODO -->
-					Example
+					<h3>Example</h3>
+					<pre>
+						<code>
+/*
+ * Fonts
+ */
+$gothamRounded: 'Gotham Rounded A', 'Gotham Rounded B', arial narrow;
+$helvetica: Helvetica Neue, Helvetica, Arial, Sans Serif;
+$arial: Arial, sans-serif;
+$tahoma: tahoma, arial, sans-serif;
+
+$primaryFont: 'Open Sans', sans-serif;
+$groupTitles: $gothamRounded;
+$leagueGothic: league-gothic, arial narrow, sans-serif;
+						</code>
+					</pre>
 				</section>
 			</section>
 			<section>
@@ -116,26 +334,8 @@
 					URL-Helpers
 				</section>
 				<section>
-				<aside class="notes">
-					These url helpers isolate your stylesheets from environmental differences. They allow you to write the same stylesheets and use them locally without a web server, and then change them to be using asset hosts in production.
-
-					They might also insulate you against some code reorganization changes.
-				</aside>
-				<img class="heart_break_img" src="http://media.giphy.com/media/SIPIe590rx6iA/giphy.gif">
-				<p class="heart_break_words"><span class="emph">Seperate</span> your stylesheets from your environment.</p>
-				</section>
-				<section>
-				<p>Your config.rb file will set up the path to image assests.</p>
-					<pre><code>
-images_dir = "image"
-					</code></pre>
-					<p>And in your SCSS file you can now use "image-url" helper</p>
-					<pre><code>
-.sca-credit-card-img {
-	background: image-url('creditcard.svg') right no-repeat;
-	background-size: contain;
-}
-					</code></pre>
+					<!--TODO -->
+					Example
 				</section>
 			</section>
 			<section>
@@ -143,9 +343,55 @@ images_dir = "image"
 					Mixins
 				</section>
 				<section>
-					<!-- TODO -->
-					<!--Patty-->
-					Example
+					<h3>Example</h3>
+					<pre>
+						<code>
+/* Styles in both browsers and backup */
+
+@mixin down-arrow {
+	content: ' ';
+	top: 10px;
+	position: relative;
+	margin-left: 5px;
+	border-style: solid;
+	border-width: 5px 5px 0 5px;
+	border-color: $grey transparent transparent transparent;
+}
+
+@mixin up-arrow {
+	content: ' ';
+	bottom: 10px;
+	position: relative;
+	margin-left: 5px;
+	border-style: solid;
+	border-width: 0 5px 5px 5px;
+	border-color: transparent transparent $grey transparent;
+}
+
+						</code>
+					</pre>
+				</section>
+								<section>
+					<h3>Another Example</h3>
+					<pre>
+						<code>
+@mixin gotham-rounded-font($size) {
+	font-family: $gothamRounded;
+	font-style: normal;
+	font-size: $size;
+}
+
+@mixin primary-font($size) {
+	font-size: $size;
+	font-family: $primaryFont;
+}
+
+@mixin arial($size) {
+	font-family: $arial;
+	font-size: $size;
+}
+						</code>
+					</pre>
 				</section>
 			</section>
 			<section>
@@ -153,14 +399,91 @@ images_dir = "image"
 					Extends
 				</section>
 				<section>
-					<!-- TODO -->
-					<!--Patty-->
-					Example
+					<h3>Example</h3>
+					<pre>
+						<code>
+								 .sca-checkmark {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 14px auto;
+		margin: 0 10px 0 10px;
+	 }
+
+	.sca-checkmark-blue {
+		@extend .sca-checkmark;
+		background-image: image-url('checkmark_blue.svg');
+	}
+
+	.sca-checkmark-grey {
+		@extend .sca-checkmark;
+		background-image: image-url('checkmark_grey.svg');
+	}
+						</code>
+					</pre>
 				</section>
 			</section>
 			<section>
-				Mixins vs Extends
-				<!--Patty -->
+				<section>
+					Mixins vs Extends
+				</section>
+				<section>
+					<h3>@extend</h3>
+					<pre>
+						<code>
+.boom {
+	color: blue;
+}
+
+.pow {
+	@extend boom;
+}
+						</code>
+					</pre>
+					CSS output:
+					<pre>
+						<code>
+. boom, .pow {
+	color: blue;
+}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3>@mixin</h3>
+					<pre>
+						<code>
+
+.foo {
+  padding: 10px;
+  .bar {
+    color: red; 
+  }
+}
+
+.moo {
+	@extend .foo;
+}
+						</code>
+					</pre>
+					CSS output
+					<pre>
+					<code>
+.foo, .moo {
+  padding: 10px;
+}
+.foo .bar, .moo h3 {
+  color: red;
+}
+					</code>
+					</pre>
+					<aside class="notes">
+Notice: it doesn't "fetch" the style from .boom, instead it commma separates the original selector. It applies the styles to both more efficeintly.
+
+@mixin fetches an inserts. Though not as efficient it can take parameters and process/use them in the output. 
+
+Note SASS also extends all nested selectors as well:
+					</aside>					
+				</section>
 			</section>
 			<!-- Section 6: Special Concerns for Enterprise Applications -->
 			<section>
@@ -169,7 +492,7 @@ images_dir = "image"
 				</section>
 				<section>
 					<!-- TODO -->
-					<!-- PATTY -->
+					<!--9.. PATTY -->
 					Code Example for sure
 				</section>
 			</section>
@@ -196,18 +519,11 @@ images_dir = "image"
 			</section>
 			<section>
 				<section>
-					1000s of lines of CSS means there's only <span class="emph">two</span> ways to do this
+					Iterative Process of working with SO MUCH css
 				</section>
 				<section>
-					<p>Tortuous, never-ending level grind</p>
-					<img src="images/never_ending_8_bit.gif">
-				</section>
-				<section>
-					<aside class="notes">
-						Point out the date started and the date(s) we were still making SASS conversions on
-					</aside>
-					<p>Make it an <span class="emph">iterative</span> process</p>
-					<img class="branch_history" src="images/branch_history.png">
+					<!-- TODO -->
+					Example
 				</section>
 			</section>
 			<section>
