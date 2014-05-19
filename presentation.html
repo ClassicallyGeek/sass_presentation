@@ -396,24 +396,18 @@ images_dir = "image"
 						<code>
 /* Styles in both browsers and backup */
 
-@mixin down-arrow {
+@mixin down-arrow($color, $size) {
 	content: ' ';
-	top: 10px;
-	position: relative;
-	margin-left: 5px;
 	border-style: solid;
-	border-width: 5px 5px 0 5px;
-	border-color: $grey transparent transparent transparent;
+	border-width: $size $size 0 $size;
+	border-color: $color transparent transparent transparent;
 }
 
-@mixin up-arrow {
+@mixin up-arrow($color, $size) {
 	content: ' ';
-	bottom: 10px;
-	position: relative;
-	margin-left: 5px;
 	border-style: solid;
-	border-width: 0 5px 5px 5px;
-	border-color: transparent transparent $grey transparent;
+	border-width: 0 $size $size $size;
+	border-color: transparent transparent $color transparent;
 }
 
 						</code>
