@@ -529,18 +529,32 @@ Note SASS also extends all nested selectors as well:
 			</section>
 			<!-- Section 6: Special Concerns for Enterprise Applications -->
 			<section>
+				Enterprise Foes
+				<img src="">
+			</section>
+			<section>
 				<section>
-					Extreme Nesting
+					Working with frameworks
 				</section>
 				<section>
-					<!-- TODO -->
-					<!--9.. PATTY -->
-					Code Example for sure
+					<aside class="notes">
+						Did not use a theme builder because our designers made up a lot of components. e.g. date picker
+					</aside>
+					Giant Amounts of CSS provided that you will be specifying/writing over
+					<pre><code>
+.x-property-grid .x-grid-row .x-grid-property-name .x-grid-cell-inner,
+.x-property-grid .x-grid-row-over .x-grid-property-name .x-grid-cell-inner {
+  padding-left: 12px;
+  background-image: url('../../resources/themes/grid/property-cell-bg.gif');
+  background-repeat: no-repeat;
+  background-position: -16px 2px;
+}
+					</code></pre>
 				</section>
 			</section>
 			<section>
 				<section>
-					Example of dropdown reskinning 
+					Date-Picker Example
 				</section>
 				<section>
 					<!-- TODO -->
@@ -551,12 +565,13 @@ Note SASS also extends all nested selectors as well:
 				</section>
 			</section>
 			<section>
+
 				<section>
-					Working with frameworks
+					Modular design
 				</section>
 				<section>
-					<!-- TODO -->
-					Example
+					The Importance of the top-level selector e.g. .toolbar { .buttons } vs .grid { .buttons} 
+				Example
 				</section>
 			</section>
 			<section>
@@ -573,15 +588,6 @@ Note SASS also extends all nested selectors as well:
 					</aside>
 					<p>Make it an <span class="emph">iterative</span> process</p>
 					<img class="branch_history" src="images/branch_history.png">
-				</section>
-			</section>
-			<section>
-				<section>
-					Modular design
-				</section>
-				<section>
-					<!-- TODO -->
-					Example
 				</section>
 			</section>
 		</div> <!-- end slides -->
