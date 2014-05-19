@@ -1,3 +1,6 @@
+$white: #FFFFFF;
+$black: #000000;
+
 @font-face {
 	font-family: dusty;
 	src: url("../fonts/dusty.ttf");
@@ -8,10 +11,31 @@
 		padding: 0 10px;
 		font-family: dusty;
 	}
+
+	h3.foes-label {
+		color: $white;
+		padding-left: 50px;
+		padding-top: 65px;
+		float: left;
+		.emph {
+			font-size: 1.2em;
+		}
+	}
+	.foes-img {
+		border: none;
+		width: 25%;
+		height: 25%;
+	}
 }
+
+.foes {
+	background-color: $black;
+}
+
 .heart_break_img {
 	float: left;
 }
+
 .heart_break_words {
 	position: relative;
 	top: 200px;
