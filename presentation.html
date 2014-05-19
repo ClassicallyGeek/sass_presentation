@@ -308,11 +308,34 @@ line_comments = false
 			</section>
 			<section>
 				<section>
-					Nesting
+					Nesting: A spell for organizing and structuring your code
 				</section>
 				<section>
-					<!-- TODO -->
-					Example
+				Most importantly it has the power to <span class="emph">stop</span> you from <span class="emph">repeating</span> the same lines over and over.
+					<pre><code class='sass'>
+.sca-buy-container {
+	@include border-radius(4px);
+	background-color: $bright-red;
+	color: $white;
+
+	.sca-buy-header,
+	.sca-buy-subtext,
+	.sca-buy-link {
+		font-weight: bold;
+	}
+	.sca-buy-header {
+		font-size: 1.2em;
+	}
+	.sca-buy-subtext {
+		margin: 5px 0 15px 0;
+	}
+}
+</code></pre>
+				</section>
+				<section>
+				<h3>Beware</h3>
+				Potential <span class="emph">Evils</span> include: 
+				Non-resuable code due to extremely specific selectors spawned by too much nesting and mimicing your DOM structure.
 				</section>
 			</section>
 			<section>
