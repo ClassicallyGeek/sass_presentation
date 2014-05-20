@@ -1,0 +1,99 @@
+.sca-batch-picker {
+	top: 5px !important; /* extjs @element.style */
+	height: 27px;
+	border: 1px solid $grey-light;
+	@include border-radius(3px);
+	padding: 0;
+	margin-left: 8px !important; //overriding @element.style
+
+	&.x-toolbar.x-box-item.x-toolbar-item.x-toolbar-default.x-box-layout-ct {
+		border: 1px $grey-lighter solid;
+	}
+
+	.date-display {
+		position: 0;
+		height: 27px;
+		width: 194px;
+		padding: 3px 0;
+		border-style: solid;
+		border-color: $grey-lighter;
+		border-radius: 0px;
+		border-width: 0 1px !important;  //overriding @element.style
+
+		.timestamp,
+		.date {
+			color: $concrete;
+		}
+
+		.sca-calendar-img {
+			background-position: center;
+			margin-left: 5px;
+		}
+
+		&.all-dates {
+			.sca-calendar-img {
+				margin-top: 1px;
+			}
+
+			.x-btn-icon.sca-calendar-img.batch-picker-icon {
+				background: image-url('infinity_search.svg') center no-repeat;
+			}
+
+			&.x-btn-over {
+				.x-btn-icon.sca-calendar-img.batch-picker-icon {
+					background: image-url('infinity_search_hover.svg') center no-repeat;
+				}
+			}
+		}
+
+		&.x-btn-over {
+			.x-btn-icon.sca-calendar-img.batch-picker-icon {
+				background: image-url('calendar_alt-blue.svg') center no-repeat;
+			}
+
+			.timestamp,
+			.date {
+				color: $ocean;
+			}
+		}
+	}
+
+	.x-btn.x-item-disabled {
+		@include opacity(0.3);
+	}
+
+	.no-batches.x-btn.x-item-disabled {
+		@include opacity(1);
+	}
+
+	.x-btn-icon.sca-calendar-img.batch-picker-icon {
+		width: 20px;
+		height: 18px;
+	}
+
+	.sca-paging-left-btn.sca-paging-left-arrow,
+	.sca-paging-right-btn.sca-paging-right-arrow {
+		padding: 0;
+		width: 26px;
+
+		&.x-btn-default-toolbar-small-over {
+			border-color: transparent;
+		}
+	}
+
+	.x-btn-default-toolbar-small-over,
+	.x-btn-default-toolbar-small-menu-active {
+		background-color: transparent;
+		background-image: none;
+	}
+
+	.timestamp {
+		font-size: 11px;
+	}
+
+	.date {
+		padding: 0 5px 0 10px;
+		font-weight: bold;
+		font-size: 13px;
+	}
+}
