@@ -61,7 +61,7 @@ $black: #000000;
 	@include transition(all, 3s);
 	@include transition(border, 1s);
 	.button-label {
-		@include transition(opacity, .5s);
+		@include transition(opacity, .5s, ease);
 		@include opacity(0);
 	}
 }
@@ -100,4 +100,7 @@ $black: #000000;
 			right: 350px;
 		}
 	}
+}
+.reuse-pwned {
+	width: 25%;
 }
