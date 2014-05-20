@@ -1,4 +1,5 @@
 @import "compass/css3/transition";
+@import "compass/css3/opacity";
 
 $white: #FFFFFF;
 $black: #000000;
@@ -51,39 +52,52 @@ $black: #000000;
 .frameworks-overview-img {
 	width: 25%;
 }
-.animate-buttons .button-ex {
+.animate-buttons .button-container {
+	display: inline-block;
 	position: relative;
 	top: 0;
 	right: 0;
+	border: 4px solid transparent;
 	@include transition(all, 3s);
+	@include transition(border, 1s);
+	.button-label {
+		@include transition(opacity, .5s);
+		@include opacity(0);
+	}
 }
-.animate-buttons:hover .button-ex {
-	&.button-one {
-		top: 100px;
-		right: 50px;
-	}
-	&.button-two {
-		top: 30px;
-		right: -20px;
-	}
-	&.button-three {
-		top: -100px;
-		right: 100px;
-	}
-	&.button-four {
-		top: -24px;
-		right: -23px;
-	}
-	&.button-five {
-		top: 75px;
-		right: 32px;
-	}
-	&.button-six {
-		top: 45px;
-		right: -230px;
-	}
-	&.button-seven {
-		top: 200px;
-		right: 50px;
+.animate-buttons:hover {
+	.button-container {
+		border: 4px solid black;
+		.button-label {
+			@include opacity(1);
+		}
+		&.button-one {
+			top: 60px;
+			right: -20px;
+		}
+		&.button-two {
+			top: 30px;
+			right: -20px;
+		}
+		&.button-three {
+			top: -100px;
+			right: -200px;
+		}
+		&.button-four {
+			top: -10px;
+			right: -150px;
+		}
+		&.button-five {
+			top: 100px;
+			right: -200px;
+		}
+		&.button-six {
+			top: 45px;
+			right: -230px;
+		}
+		&.button-seven {
+			top:-50px ;
+			right: 350px;
+		}
 	}
 }
