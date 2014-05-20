@@ -1,3 +1,5 @@
+@import "compass/css3/transition";
+
 $white: #FFFFFF;
 $black: #000000;
 
@@ -45,4 +47,43 @@ $black: #000000;
 }
 .downed-batch-picker-boss {
 	width: 400px;
+}
+.frameworks-overview-img {
+	width: 25%;
+}
+.animate-buttons .button-ex {
+	position: relative;
+	top: 0;
+	right: 0;
+	@include transition(all, 3s);
+}
+.animate-buttons:hover .button-ex {
+	&.button-one {
+		top: 100px;
+		right: 50px;
+	}
+	&.button-two {
+		top: 30px;
+		right: -20px;
+	}
+	&.button-three {
+		top: -100px;
+		right: 100px;
+	}
+	&.button-four {
+		top: -24px;
+		right: -23px;
+	}
+	&.button-five {
+		top: 75px;
+		right: 32px;
+	}
+	&.button-six {
+		top: 45px;
+		right: -230px;
+	}
+	&.button-seven {
+		top: 200px;
+		right: 50px;
+	}
 }
