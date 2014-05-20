@@ -72,7 +72,9 @@
 							Time
 						</li>
 						<li>
-							Entire team needs to be onboard and learn
+						Entire team needs to be onboard and learn
+						<img class="teamwork" src="images/sonic_tails_fatality.gif">
+						<p>Without the support of your team, this will probably fail. No teammate left behind.</p>
 						</li>
 					</ul>
 				</section>
@@ -554,18 +556,55 @@ Note SASS also extends all nested selectors as well:
 			</section>
 			<section>
 				<section>
-					Date-Picker Example
+				<h3>Mini-<span class="emph">boss</span>:</h3>
+				<h4 style="float: left">Overhauling the look of Framework components</h4>
+				<img src="images/rhino_boss.gif">
+				<h4>Based on a true story</h4>
 				</section>
 				<section>
-					<!-- TODO -->
-					Code Example for sure
+				<h3>Designers visited the <span class="emph">magical</span> fairy cave of inspiration</h3>
+					<img src="images/zelda_fairy.gif">
+				</section>
+				<section>
+				<p>They invented the <span class="emph">Batch Picker</span></p>
+					<img src="images/batch_picker_dream.png">
+				</section>
+				<section>
+					<aside class="notes">
+						Why Not write our own? <br>
+						It was still worth leveraging the sencha datepicker for the date math, general built-in structure of events that occurred during month navigation and date selection 
+					</aside>
+					<p>To make their dreams come true, we create a custom component out of ExtJS parts</p>
+					<img src="images/sencha_toolbar.png">
+					<img src="images/sencha_date_picker.png">
+					<p>But we needed to <span class="emph">overhaul</span> the entire look of the component</p>
+				</section>
+				<section>
+					<a href="batch_picker.scss" target="_blank">BatchPicker.scss</a>
+				</section>
+				<section>
+					<h3><span class="emph">Downed</span> that boss</h3>
+					<img class="downed-batch-picker-boss" src="images/rhino_knock_off.gif">
+				</section>
+				<section>
+				<h3>The <span class="emph">Reality</span></h3>
+				<ul>
+					<li>Nested 5 times
+<pre><code>
+.x-btn-icon.sca-calendar-img.batch-picker-icon {
+	background: image-url('infinity_search_hover.svg') center no-repeat;
+}
+					</li>
+					<li>Specifers that follow the generated DOM:  
 					<pre><code>
-						//code here
+&.x-toolbar.x-box-item.x-toolbar-item.x-toolbar-default.x-box-layout-ct 
+</code></pre>
+					</li>
+					<li>There are even "<span class="emph">!important</span>"s to overwrite element styles that get generated in the html by ExtJS</li>
 					</code></pre>
 				</section>
 			</section>
 			<section>
-
 				<section>
 					Modular design
 				</section>
@@ -589,6 +628,11 @@ Note SASS also extends all nested selectors as well:
 					<p>Make it an <span class="emph">iterative</span> process</p>
 					<img class="branch_history" src="images/branch_history.png">
 				</section>
+			</section>
+			<section>
+				<h3><span class="emph">Pwn</span> those foes</h3>
+				<img src="images/bowser_defeated_n64.gif">
+				<p>Special thanks to Spanning Cloud Apps. Without their quest chain, we couldn't have faced those bosses</p>
 			</section>
 		</div> <!-- end slides -->
 	</div> <!-- end reveal -->
