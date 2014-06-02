@@ -309,6 +309,10 @@ line_comments = false
 			</section>
 			<section>
 				<section>
+					<aside class="notes">
+						When use variables?<br>
+						Use a variable when you have a single value you'd like to store
+					</aside>
 					<h3> Variables</h3>
 					<p>Colors, Fonts, <span class="emph">etc.</span></p>
 				</section>
@@ -367,7 +371,7 @@ $leagueGothic: league-gothic, arial narrow, sans-serif;
 			</section>
 			<section>
 				<section>
-					URL-Helpers
+					<h3>URL-Helpers</h3>
 				</section>
 				<section>
 					<aside class="notes">
@@ -392,7 +396,12 @@ images_dir = "image"
 			</section>
 			<section>
 				<section>
-					Mixins
+					<aside class="notes">
+					Mixins always compile to CSS rules where they appear in code. Where an @extend generates more selectors, @mixin always generates more rules. 
+					This is why for static rules it is often (not always) less bloaty to use @extend.<br>
+					As a rule of thumb, I only use mixins to do "mathy" things. "If it doesn't need to pass variable, it doesn't need to be a mixin" is my motto
+					</aside>
+					<h3>Mixins</h3>
 				</section>
 				<section>
 					<h3>Example</h3>
@@ -417,8 +426,8 @@ images_dir = "image"
 						</code>
 					</pre>
 				</section>
-								<section>
-					<h3>Another Example</h3>
+				<section>
+					<h3><span class="emph">Another</span> Example</h3>
 					<pre>
 						<code>
 @mixin gotham-rounded-font($size) {
@@ -441,8 +450,11 @@ images_dir = "image"
 				</section>
 			</section>
 			<section>
-				<section>
-					Extends
+			<section>
+				<aside class="notes">
+				Use @extend when you want to store multiple static properties and pass them to selectors
+				</aside>
+					<h3>Extends</h3>
 				</section>
 				<section>
 					<h3>Example</h3>
@@ -470,7 +482,8 @@ images_dir = "image"
 			</section>
 			<section>
 				<section>
-					Mixins vs Extends
+				<h3>Mixins vs Extends</h3>
+				While an @extend generates more <span class="emph">selectors</span>, @mixin always generates more <span class="emph">rules</span>.
 				</section>
 				<section>
 					<h3>@extend</h3>
@@ -638,16 +651,19 @@ Note SASS also extends all nested selectors as well:
 					<p>Make it an <span class="emph">iterative</span> process</p>
 					<img class="branch_history" src="images/branch_history.png">
 				</section>
-			</section>
+				</section>
+				<!--
 			<section>
 				<h3><span class="emph">Pwned</span></h3>
 				<img src="images/bowser_defeated_n64.gif">
 				<p>Special thanks to Spanning Cloud Apps. Without their quest chain, we couldn't reach a level to down those bosses</p>
-			</section>
+				</section>
+				-->
 			<section>
-				<h3>Conclusion</h3>
+				<h3>Boss Drop</h3>
 				<p>Our code is signficantly more <span class="emph">maintainable.</span></p>
 				<img src="images/link_you_win.gif">
+				<p>And with some practice a lot <span class="emph">easier</span> to write!</p>
 			</section>
 		</div> <!-- end slides -->
 	</div> <!-- end reveal -->
