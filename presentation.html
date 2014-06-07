@@ -301,6 +301,47 @@ line_comments = false
 					TODO: some good ol' compass mixins examples 
 					<img class="compass-img" src="images/tools.gif">
 				</section>
+				<section>
+					<h3> Fonts </h3>
+					<pre>
+						<code>
+@mixin gotham-rounded-font($size) {
+	font-family: $gothamRounded;
+	font-style: normal;
+	font-size: $size;
+}
+
+@mixin primary-font($size) {
+	font-size: $size;
+	font-family: $primaryFont;
+}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3> Custom Components </h3>
+					<pre>
+						<code>
+@mixin statusBoinkHover($name, $hoverImg) {
+	.#{$name}:hover {
+		background: image-url($hoverImg) left center no-repeat;
+	}
+}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3> Utilities </h3>
+					<pre>
+						<code>
+@mixin opacity($opacity) {
+     opacity: $opacity;
+     $opacityIE: $opacity * 100;
+     filter: alpha(opacity=$opacityIE);
+}
+						</code>
+					</pre>
+				</section>
 			</section>
 			<!-- Section: 5: First Pass -->
 			<section>
