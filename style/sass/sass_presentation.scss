@@ -3,13 +3,18 @@
 
 $white: #FFFFFF;
 $black: #000000;
-
+$slateblue: #1C86EE;
+$offwhite: #EEF0EE;
 @font-face {
 	font-family: dusty;
 	src: url("../fonts/dusty.ttf");
 }
 
 .reveal {
+	.presenters {
+		width: 600px;
+		margin: auto;
+	}
 	.emph {
 		padding: 0 10px;
 		font-family: dusty;
@@ -31,6 +36,23 @@ $black: #000000;
 	}
 	.pit-falls-text {
 		padding-top: 1.5em;
+	}
+	.blur,
+	.title-text {
+		opacity: .9;
+		position: relative;
+		bottom: 170px;
+		left: 50px;
+		font-size: .8em;
+		color: $white;
+		font-family: dusty;
+	}
+	.blur {
+		opacity: 1;
+		font-size: .8em;
+		bottom: 124px;
+		color: transparent;
+		text-shadow: 2px 2px 8px $slateblue;
 	}
 }
 
@@ -119,5 +141,15 @@ $black: #000000;
 }
 .pit-falls-img {
 	width: 25%;
+	float: right;
+}
+.title-text {
+	color: $white;
+	font-family: dusty;
+}
+.first-presenter {
+	float: left;
+}
+.second-presenter {
 	float: right;
 }

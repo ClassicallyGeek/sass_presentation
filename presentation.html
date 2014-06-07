@@ -38,7 +38,20 @@
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
 			<!-- Opening slide -->
-			<section data-background="http://24.media.tumblr.com/tumblr_m2u6wcClgw1qe29dro1_500.gif">
+			<section>
+			<img class="title_slide" src="images/level_up.gif">
+			<p class="blur">your style</p>
+			<p class="title-text">your style</p>
+			<div class="presenters">
+				<div class="first-presenter">
+					<p>Patty Cifra</p>
+					<p>@<span class="emph">pncifra</span></p>
+				</div>
+				<div class="second-presenter">
+					<p>Ashley Price</p>
+					<p>@<span class="emph">classicallygeek</span></p>
+				</div>
+			</div>
 			</section>
 			<!-- Section 1: Why Convert -->
 			<section>
@@ -67,16 +80,9 @@
 				</section>
 				<section>
 					<h3> Cons: </h3>
-					<ul>
-						<li>
-							Time
-						</li>
-						<li>
-						Entire team needs to be onboard and learn
-						<img class="teamwork" src="images/sonic_tails_fatality.gif">
-						<p>Without the support of your team, this will probably fail. No teammate left behind.</p>
-						</li>
-					</ul>
+						<p>This can take a <span class="emph">lot</span> of time</p>
+						<img class="teamwork" src="images/teamwork_mario.gif">
+						<p>Additionally, this will fail if your <span class="emph">entire</span> team isn't onboard</p>
 				</section>
 			</section>
 			<section>
@@ -377,7 +383,7 @@ line_comments = false
 			<!-- Section: 5: First Pass -->
 			<section>
 			<img class="spellbook-title" src="images/spellbook.png">
-			<div><img class="spellbook-img" src="http://i.imgur.com/LPSJDBT.gif"></div>
+			<div><img class="spellbook-img" src="images/magic_missile.gif"></div>
 			</section>
 			<section>
 				<section>
@@ -532,22 +538,22 @@ images_dir = "image"
 					<h3>Example</h3>
 					<pre>
 						<code>
-								 .sca-checkmark {
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 14px auto;
-		margin: 0 10px 0 10px;
-	 }
+.sca-checkmark {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 14px auto;
+	margin: 0 10px 0 10px;
+ }
 
-	.sca-checkmark-blue {
-		@extend .sca-checkmark;
-		background-image: image-url('checkmark_blue.svg');
-	}
+.sca-checkmark-blue {
+	@extend .sca-checkmark;
+	background-image: image-url('checkmark_blue.svg');
+}
 
-	.sca-checkmark-grey {
-		@extend .sca-checkmark;
-		background-image: image-url('checkmark_grey.svg');
-	}
+.sca-checkmark-grey {
+	@extend .sca-checkmark;
+	background-image: image-url('checkmark_grey.svg');
+}
 						</code>
 					</pre>
 				</section>
@@ -625,7 +631,7 @@ Note SASS also extends all nested selectors as well:
 				<section>
 					<h3>Working with <span class="emph">frameworks</span></h3>
 					<p>Robust frameworks are very popular for larger web applications and introduce a number of hurdles.</p>
-					<img class="frameworks-overview-img" src="images/link_kicks_butt.gif">
+					<img src="images/mario_jump_over_fire.gif">
 					<p>Let's take a look at some enemies we ran into and how we took them down.</p>
 				</section>
 				<section>
@@ -670,29 +676,42 @@ Note SASS also extends all nested selectors as well:
 					<p>But we needed to <span class="emph">overhaul</span> the entire look of the component</p>
 				</section>
 				<section>
+					<aside class="notes">
+						We nested 5 times for .x-btn-icon.sca-calendar-img.batch-picker-icon.  It's under
+						.sca-batch-picker<br>
+						.date-display<br>
+						&.all-dates<br>
+						&.x-btn-over<br>
+						<br>
+						We had specifiers that followed the generated DOM: <br>
+						&amp;.x-toolbar.x-box-item.x-toolbar-item.x-toolbar-default.x-box-layout-ct
+						<br><br>
+						There's even and !important to overrite element styels that get generated in the HTML by EXTJS
+					</aside>
 					<a href="batch_picker.scss" target="_blank">BatchPicker.scss</a>
 				</section>
 <!--				<section>
 					<h3><span class="emph">Downed</span> that boss</h3>
 					<img class="downed-batch-picker-boss" src="images/rhino_knock_off.gif">
-					</section> -->
+					</section>
 				<section>
-				<h3>The <span class="emph">Reality</span></h3>
-				<ul>
-					<li>Nested 5 times
-<pre><code>
+					<h3>The <span class="emph">Reality</span></h3>
+					<p>Nested 5 times</p>
+					<pre><code>
+
 .x-btn-icon.sca-calendar-img.batch-picker-icon {
 	background: image-url('infinity_search_hover.svg') center no-repeat;
 }
-					</li>
-					<li>Specifers that follow the generated DOM:  
-					<pre><code>
-&.x-toolbar.x-box-item.x-toolbar-item.x-toolbar-default.x-box-layout-ct 
-</code></pre>
-					</li>
-					<li>There are even "<span class="emph">!important</span>"s to overwrite element styles that get generated in the html by ExtJS</li>
-					</code></pre>
-				</section>
+
+						</code></pre>
+						<p>Specifers that follow the generated DOM:</p>
+						<pre><code>
+
+&amp;.x-toolbar.x-box-item.x-toolbar-item.x-toolbar-default.x-box-layout-ct 
+
+						</code></pre>
+						<p>There are even "<span class="emph">!important</span>"s to overwrite element styles that get generated in the html by ExtJS</p>
+						</section> -->
 			</section>
 			<section>
 				<section>
