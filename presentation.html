@@ -302,42 +302,73 @@ line_comments = false
 					<img class="compass-img" src="images/tools.gif">
 				</section>
 				<section>
-					<h3> Fonts </h3>
+					<h3> Box Shadow </h3>
 					<pre>
 						<code>
-@mixin gotham-rounded-font($size) {
-	font-family: $gothamRounded;
-	font-style: normal;
-	font-size: $size;
+// Default single box shadow
+#box-shadow-default {
+  @include single-box-shadow;
 }
-
-@mixin primary-font($size) {
-	font-size: $size;
-	font-family: $primaryFont;
+ 
+// Box shadow with custom settings
+#box-shadow-custom {
+  @include box-shadow(red 2px 2px 10px);
 }
-						</code>
-					</pre>
-				</section>
-				<section>
-					<h3> Custom Components </h3>
-					<pre>
-						<code>
-@mixin statusBoinkHover($name, $hoverImg) {
-	.#{$name}:hover {
-		background: image-url($hoverImg) left center no-repeat;
-	}
+ 
+#box-shadow-custom-multiple {
+  @include box-shadow(rgba(blue, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
 }
 						</code>
 					</pre>
 				</section>
 				<section>
-					<h3> Utilities </h3>
+					<h3> Opacity </h3>
 					<pre>
 						<code>
-@mixin opacity($opacity) {
-     opacity: $opacity;
-     $opacityIE: $opacity * 100;
-     filter: alpha(opacity=$opacityIE);
+#opacity-10 {
+  @include opacity(0.1);
+}
+ 
+#opacity-20 {
+  @include opacity(0.2);
+}
+ 
+#opacity-50 {
+  @include opacity(0.5);
+}
+ 
+#opaque {
+  @include opaque;
+}
+ 
+#transparent {
+  @include transparent;
+}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3> Border Radius </h3>
+					<pre>
+						<code>
+#border-radius {
+  @include border-radius(25px);
+}
+ 
+#border-radius-top-left {
+  @include border-top-left-radius(25px);
+}
+ 
+#border-radius-top-right {
+  @include border-top-right-radius(25px);
+}
+ 
+#border-radius-bottom-left {
+  @include border-bottom-left-radius(25px);
+}
+ 
+#border-radius-bottom-right {
+  @include border-bottom-right-radius(25px);
 }
 						</code>
 					</pre>
