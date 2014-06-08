@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="reveal/css/reveal.css">
 	<link rel="stylesheet" href="reveal/css/theme/sky.css">
 	<!-- For syntax highlighting -->
-	<link rel="stylesheet" href="reveal/plugin/highlight/styles/zenburn.css">
+	<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
 	<!-- For the slides -->
 	<link rel="stylesheet" href="css/slides.css">
 	<link rel="stylesheet" href="style/stylesheet/sass_presentation.css">
@@ -106,7 +106,7 @@
 				<section>
 					<h3>EXAMPLE</h3>
 					<pre>
-						<code>
+						<code class="sass scss">
 							=border-radius($radius)
 	  -webkit-border-radius: $radius
 	  -moz-border-radius:    $radius
@@ -144,7 +144,7 @@
 				<section>
 					<h3>EXAMPLE</h3>
 					<pre>
-						<code>
+						<code class="sass scss">
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -195,7 +195,7 @@
 				<section>
 				<h3>Be <span class="emph">Structured</span> </h3>
 					<pre>
-						<code>
+						<code class="sass scss">
 /web/sass
   ->home.scss
   ->articlesSelected.scss
@@ -225,7 +225,7 @@
 				<section>
 					<h3>@Import</h3>
 					<pre>
-						<code>
+						<code class="sass scss">
 @import "mixins/colors";
 @import "mixins/typography";
 @import "mixins/functions";
@@ -283,7 +283,7 @@
 				<section>
 					<h3>Example</h3>
 					<pre>
-						<code>
+						<code class="sass scss">
 							# Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
@@ -310,7 +310,7 @@ line_comments = false
 				<section>
 					<h3> Box Shadow </h3>
 					<pre>
-						<code>
+						<code class="sass scss">
 // Default single box shadow
 #box-shadow-default {
   @include single-box-shadow;
@@ -330,7 +330,7 @@ line_comments = false
 				<section>
 					<h3> Opacity </h3>
 					<pre>
-						<code>
+						<code class="sass scss">
 #opacity-10 {
   @include opacity(0.1);
 }
@@ -356,7 +356,7 @@ line_comments = false
 				<section>
 					<h3> Border Radius </h3>
 					<pre>
-						<code>
+						<code class="sass scss">
 #border-radius {
   @include border-radius(25px);
 }
@@ -397,10 +397,7 @@ line_comments = false
 				<section>
 					<h3>Example</h3>
 					<pre>
-						<code>
-/*
- * Fonts
- */
+						<code class="sass scss">
 $gothamRounded: 'Gotham Rounded A', 'Gotham Rounded B', arial narrow;
 $helvetica: Helvetica Neue, Helvetica, Arial, Sans Serif;
 $arial: Arial, sans-serif;
@@ -420,7 +417,7 @@ $leagueGothic: league-gothic, arial narrow, sans-serif;
 				</section>
 				<section>
 				Most importantly it has the power to <span class="emph">stop</span> you from <span class="emph">repeating</span> the same lines over and over.
-					<pre><code class='sass'>
+					<pre><code class="sass scss">
 .sca-buy-container {
 	@include border-radius(4px);
 	background-color: $bright-red;
@@ -433,9 +430,6 @@ $leagueGothic: league-gothic, arial narrow, sans-serif;
 	}
 	.sca-buy-header {
 		font-size: 1.2em;
-	}
-	.sca-buy-subtext {
-		margin: 5px 0 15px 0;
 	}
 }
 </code></pre>
@@ -460,11 +454,11 @@ $leagueGothic: league-gothic, arial narrow, sans-serif;
 				</section>
 				<section>
 					<p>Your config.rb file will set up the path to image assets.</p>
-					<pre><code>
+					<pre><code class="sass scss">
 images_dir = "image"
 					</code></pre>
 					<p>And in your SCSS file you can now use "image-url" helper</p>
-					<pre><code>
+					<pre><code class="sass scss">
 .sca-credit-card-img {
 	background: image-url('creditcard.svg') right no-repeat;
 	background-size: contain;
@@ -484,9 +478,7 @@ images_dir = "image"
 				<section>
 					<h3>Example</h3>
 					<pre>
-						<code>
-/* Styles in both browsers and backup */
-
+						<code class="sass scss">
 @mixin down-arrow($color, $size) {
 	content: ' ';
 	border-style: solid;
@@ -507,7 +499,7 @@ images_dir = "image"
 				<section>
 					<h3><span class="emph">Another</span> Example</h3>
 					<pre>
-						<code>
+						<code class="sass scss">
 @mixin gotham-rounded-font($size) {
 	font-family: $gothamRounded;
 	font-style: normal;
@@ -537,7 +529,7 @@ images_dir = "image"
 				<section>
 					<h3>Example</h3>
 					<pre>
-						<code>
+						<code class="sass scss">
 .sca-checkmark {
 	background-position: center;
 	background-repeat: no-repeat;
@@ -566,7 +558,7 @@ images_dir = "image"
 				<section>
 					<h3>@extend</h3>
 					<pre>
-						<code>
+						<code class="sass scss">
 .boom {
 	color: blue;
 }
@@ -578,7 +570,7 @@ images_dir = "image"
 					</pre>
 					CSS output:
 					<pre>
-						<code>
+						<code class="sass scss">
 . boom, .pow {
 	color: blue;
 }
@@ -588,7 +580,7 @@ images_dir = "image"
 				<section>
 					<h3>@mixin</h3>
 					<pre>
-						<code>
+						<code class="sass scss">
 
 .foo {
   padding: 10px;
@@ -604,7 +596,7 @@ images_dir = "image"
 					</pre>
 					CSS output
 					<pre>
-					<code>
+					<code class="sass scss">
 .foo, .moo {
   padding: 10px;
 }
@@ -639,7 +631,7 @@ Note SASS also extends all nested selectors as well:
 						Did not use a theme builder because our designers made up a lot of components. e.g. date picker
 					</aside>
 					Giant Amounts of CSS provided that you will be specifying/writing over
-					<pre><code>
+					<pre><code class="sass scss">
 .x-property-grid .x-grid-row .x-grid-property-name .x-grid-cell-inner,
 .x-property-grid .x-grid-row-over .x-grid-property-name .x-grid-cell-inner {
   padding-left: 12px;
@@ -697,7 +689,7 @@ Note SASS also extends all nested selectors as well:
 				<section>
 					<h3>The <span class="emph">Reality</span></h3>
 					<p>Nested 5 times</p>
-					<pre><code>
+					<pre><code class="sass scss">
 
 .x-btn-icon.sca-calendar-img.batch-picker-icon {
 	background: image-url('infinity_search_hover.svg') center no-repeat;
@@ -705,7 +697,7 @@ Note SASS also extends all nested selectors as well:
 
 						</code></pre>
 						<p>Specifers that follow the generated DOM:</p>
-						<pre><code>
+						<pre><code class="sass scss">
 
 &amp;.x-toolbar.x-box-item.x-toolbar-item.x-toolbar-default.x-box-layout-ct 
 
