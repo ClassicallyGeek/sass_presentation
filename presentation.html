@@ -39,6 +39,21 @@
 		<div class="slides">
 			<!-- Opening slide -->
 			<section>
+<aside class="notes">
+Hi Everyone, I'm <NAME> and this is <NAME><br>
+We work at Spanning Cloud Apps<br>
+We do <STUFF></br>
+We were inspired by our experiencing converting Spanning's flagship application from CSS to SASS<br>
+We'd like to show what it's like to update a large single page application from css to SASS and some of the things we encountered along the way</br>
+Structure of our presentation:<ul>
+<li>Brief overview of SASS for those who don't know it</li>
+<li>An overview highlighting the pieces we leveraged for those that do<li>
+<li>A look into the specific issues we had to tackle with an Enterprise app</li>
+</ul>
+Our Theme: <ul>
+<li> RPG level grind, quest chain, leveling</li>
+</ul>
+</aside>
 			<img class="title_slide" src="images/level_up.gif">
 			<p class="blur">your style</p>
 			<p class="title-text">your style</p>
@@ -60,6 +75,9 @@
 				<h3>Why Use a <span class="emph">Pre-processor?</span></h3>
 				</section>
 				<section>
+					<aside class="notes">
+PATTY
+</aside>
 					<h3>Pros:</h3>
 					<ul>
 						<li>
@@ -80,6 +98,9 @@
 					</ul> 					
 				</section>
 				<section>
+					<aside class="notes">
+					PATTY
+					</aside>
 					<h3> Cons: </h3>
 						<p>This can take a <span class="emph">lot</span> of time</p>
 						<img class="teamwork" src="images/teamwork_mario.gif">
@@ -91,13 +112,13 @@
 				<h3>Why <span class="emph">SASS</span> and moreso why <span class="emph">SCSS</span></h3>
 				</section>
 				<section>
+					<aside class="notes">
+						PATTY
+					</aside>
 					<h3>SASS</h3>
 					<ul>
 						<li>
 							Indented syntax of SASS was inherited from HAML
-						</li>
-						<li>
-							SASS syntax is more concise. (@include vs +)
 						</li>
 						<li>
 							SASS doesn't complain about missing semi-colons
@@ -132,7 +153,7 @@
 							encourages more modular code with @extend
 						</li>
 						<li>
-							existing tools often work wiht SCSS
+							existing tools often work with SCSS
 						</li>
 						<li>
 							integration with an existing CSS codebase is much easier
@@ -161,6 +182,9 @@
 			<!-- Section 3: Why not use an automatic conversion tool? -->
 			<section>
 				<section>
+				<aside class="notes">
+ASHLEY
+</aside>
 				<h3>Why not an automatic <span class="emph">conversion</span> tool?</h3>
 				</section>
 				<section>
@@ -187,10 +211,11 @@
 					<!-- TODO: elaborate more on this, PC -->					
 					<aside class="notes">
 						With traditional CSS, modularisation is implemented through classes and ids but SASS allows us to take this idea one step further through the use of functions and partials.
-
-						  - The idea here is that each module/action within the app has their own SASS file.
-						  - The idea is that anything that can made modular should be poosed int a partial so it can be reused anywhere. 
-						  - Inside which only partials and mixins needed for taht module will be imported. Similar to a well structured webapp where only the required functions and classes are imported so performance is optimised.
+<ul>
+						<li>The idea here is that each module/action within the app has their own SASS file.</li>
+						<li>The idea is that anything that can made modular should be poosed int a partial so it can be reused anywhere. </li>
+						<li>Inside which only partials and mixins needed for taht module will be imported. Similar to a well structured webapp where only the required functions and classes are imported so performance is optimised.</li>
+</ul>
 					</aside>
 				</section>
 				<section>
@@ -279,7 +304,6 @@
 								validate (validate the generated CSS)
 							</li>
 						</ul>
-					<!--4. Patty-->
 				</section>
 				<section>
 					<h3>Example</h3>
@@ -305,7 +329,7 @@ line_comments = false
 					</pre>
 				</section>
 				<section>
-					TODO: some good ol' compass mixins examples 
+					<h3>Your Compass Toolbox</h3>
 					<img class="compass-img" src="images/tools.gif">
 				</section>
 				<section>
@@ -329,6 +353,10 @@ line_comments = false
 					</pre>
 				</section>
 				<section>
+					<aside class="notes">
+ASHLEY<br>
+Older versions of MS IE have their own special approach to creating opacity and this one line will take care of it all
+</aside>
 					<h3> Opacity </h3>
 					<pre>
 						<code>
@@ -413,6 +441,13 @@ $leagueGothic: league-gothic, arial narrow, sans-serif;
 						</code>
 					</pre>
 				</section>
+				<section>
+					<aside class="notes">
+PATTY
+50 shades of grey
+				</aside>
+					COLORS
+				</section>
 			</section>
 			<section>
 				<section>
@@ -476,6 +511,7 @@ images_dir = "image"
 			<section>
 				<section>
 					<aside class="notes">
+					PATTY<br>
 					Mixins always compile to CSS rules where they appear in code. Where an @extend generates more selectors, @mixin always generates more rules. 
 					This is why for static rules it is often (not always) less bloaty to use @extend.<br>
 					As a rule of thumb, I only use mixins to do "mathy" things. "If it doesn't need to pass variable, it doesn't need to be a mixin" is my motto
@@ -486,7 +522,6 @@ images_dir = "image"
 					<h3>Example</h3>
 					<pre>
 						<code>
-/* Styles in both browsers and backup */
 
 @mixin down-arrow($color, $size) {
 	content: ' ';
@@ -587,6 +622,7 @@ images_dir = "image"
 					</pre>
 				</section>
 				<section>
+					TODO WE NEED A REAL EXAMPLE
 					<h3>@mixin</h3>
 					<pre>
 						<code>
