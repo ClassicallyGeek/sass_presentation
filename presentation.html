@@ -116,6 +116,10 @@ Our Theme: <ul>
 				<section>
 					<aside class="notes">
 						PATTY
+						- Compass
+						- variables were similar
+						- SASS used ruby
+						- syntax and structure seemed more intuitive for Sass
 					</aside>
 					<h3>Why <span class="emph">SASS</span> and moreso why <span class="emph">SCSS</span></h3>
 				</section>
@@ -136,11 +140,13 @@ Our Theme: <ul>
 				<section>
 					<aside class="notes">
 						PATTY
+						sass syntax uses indentation rather than brackets to indicate nesting of selectors, and newlines rather than semicolons to separate properties.
+						more syntactically concise.
 					</aside>
 					<h3>EXAMPLE</h3>
 					<pre>
 						<code class="sass scss">
-border-radius($radius)
+=border-radius($radius)
 	-webkit-border-radius: $radius
 	-moz-border-radius:    $radius
 	-ms-border-radius:     $radius
@@ -294,15 +300,12 @@ border-radius($radius)
 						</code>
 					</pre>
 					<aside class="notes">
-						PATTY <br>
+						PATTY <br>						
 						IMPORT: 
-
-						CSS has an import ption that lets you split your CSS into smaller, more maintainable portions. The only drawback is that each
+						CSS has an import option that lets you split your CSS into smaller, more maintainable portions. The only drawback is that each
 						time you use @imporrt in CSS it creates another HTTP request. SASS bulds on top of the current CSS @import but instead of
 						requiring an HTTP request, SASS will take the file you want to import and combine it with the file you're importing into
 						so you can serve a single CSS file to the web broweser.
-
-						NOTE to research: SASS comes loaded with much more features like if, for loops, @debug, @warn, @while etc,  <-- eh?
 					</aside>
 				</section>
 			</section>
@@ -559,6 +562,9 @@ $leagueGothic: league-gothic, arial narrow, sans-serif;
 					<aside class="notes">
 						ASHLEY<br>
 						These url helpers isolate your stylesheets from environmental differences.  They allow you to write the same stylesheets and use them locally without a web server, and then change them to using asset hosted in production. They might also insultaet you against some code reorganization changes.
+
+						These url helpers isolate your stylesheets from environmental differences.  They allow you to write the same stylesheets and use them locally without a web server, and then change them to using asset hosted in production. They might also insultate you against some code reorganization changes.
+
 					</aside>
 					<img class="heart_break_img" src="http://media.giphy.com/media/SIPIe590rx6iA/giphy.gif">
 					<p class="heart_break_words"><span class="emph">Seperate</span> your styelsheets from your environment.</p>
@@ -704,41 +710,41 @@ images_dir = "image"
 }
 						</code>
 					</pre>
+					<aside class="notes">
+						PATTY
+						Notice: it doesn't "fetch" the style from .boom, instead it commma separates the original selector. It applies the styles to both more efficeintly.
+					</aside>
 				</section>
 				<section>
 					<h3>@mixin</h3>
 					<pre>
 						<code class="sass scss">
 
-.foo {
-  padding: 10px;
-  .bar {
-    color: red; 
-  }
+@mixin test {
+  color: red;
 }
-
-.moo {
-	@extend .foo;
+.test1 {
+  @include test;
+} 
+.test2 {
+  @include test;
 }
 						</code>
 					</pre>
 					CSS output
 					<pre>
 					<code class="sass scss">
-.foo, .moo {
-  padding: 10px;
+.test1 {
+  color: red;
 }
-.foo .bar, .moo h3 {
+.test2 {
   color: red;
 }
 					</code>
 					</pre>
 					<aside class="notes">
 						PATTY<br>
-					Notice: it doesn't "fetch" the style from .boom, instead it commma separates the original selector. It applies the styles to both more efficeintly.
-
-@mixin fetches an inserts. Though not as efficient it can take parameters and process/use them in the output. 
-
+@mixin fetches and inserts. Though not as efficient it can take parameters and process/use them in the output. 
 Note SASS also extends all nested selectors as well:
 					</aside>
 				</section>
