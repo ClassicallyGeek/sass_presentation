@@ -39,6 +39,23 @@
 		<div class="slides">
 			<!-- Opening slide -->
 			<section>
+<aside class="notes">
+<ul>
+	<li>Hi Everyone, I'm _____ and this is ____</li>
+	<li>We work at Spanning Cloud Apps</li>
+	<li>Spanning does:</li>
+	<li>We were inspired by our experiencing converting Spanning's flagship application from CSS to SASS</li>
+	<li>We'd like to show what it's like to update a large single page application from css to SASS and some of the things we encountered along the way</li>
+</ul>
+Structure of our presentation:<ul>
+<li>Brief overview of SASS for those who don't know it</li>
+<li>An overview highlighting the pieces we leveraged for those that do<li>
+<li>A look into the specific issues we had to tackle with an Enterprise app</li>
+</ul>
+Our Theme: <ul>
+<li> RPG level grind, quest chain, leveling</li>
+</ul>
+</aside>
 			<img class="title_slide" src="images/level_up.gif">
 			<p class="blur">your style</p>
 			<p class="title-text">your style</p>
@@ -47,6 +64,7 @@
 					<p>Patty Cifra</p>
 					<p>@<span class="emph">pncifra</span></p>
 				</div>
+				<p>Presented by</p>
 				<div class="second-presenter">
 					<p>Ashley Price</p>
 					<p>@<span class="emph">classicallygeek</span></p>
@@ -56,9 +74,15 @@
 			<!-- Section 1: Why Convert -->
 			<section>
 				<section>
+					<aside class="notes">
+					PATTY
+					</aside>
 				<h3>Why Use a <span class="emph">Pre-processor?</span></h3>
 				</section>
 				<section>
+					<aside class="notes">
+						PATTY
+					</aside>
 					<h3>Pros:</h3>
 					<ul>
 						<li>
@@ -76,9 +100,12 @@
 						<li>
 							Frameworks (level up your CSS, compass) 
 						</li>
-					</ul> 					
+					</ul>
 				</section>
 				<section>
+					<aside class="notes">
+						PATTY
+					</aside>
 					<h3> Cons: </h3>
 						<p>This can take a <span class="emph">lot</span> of time</p>
 						<img class="teamwork" src="images/teamwork_mario.gif">
@@ -87,16 +114,19 @@
 			</section>
 			<section>
 				<section>
-				<h3>Why <span class="emph">SASS</span> and moreso why <span class="emph">SCSS</span></h3>
+					<aside class="notes">
+						PATTY
+					</aside>
+					<h3>Why <span class="emph">SASS</span> and moreso why <span class="emph">SCSS</span></h3>
 				</section>
 				<section>
+					<aside class="notes">
+						PATTY
+					</aside>
 					<h3>SASS</h3>
 					<ul>
 						<li>
 							Indented syntax of SASS was inherited from HAML
-						</li>
-						<li>
-							SASS syntax is more concise. (@include vs +)
 						</li>
 						<li>
 							SASS doesn't complain about missing semi-colons
@@ -104,21 +134,27 @@
 					</ul>
 				</section>
 				<section>
+					<aside class="notes">
+						PATTY
+					</aside>
 					<h3>EXAMPLE</h3>
 					<pre>
 						<code class="sass scss">
-							=border-radius($radius)
-	  -webkit-border-radius: $radius
-	  -moz-border-radius:    $radius
-	  -ms-border-radius:     $radius
-	  border-radius:         $radius
+border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius:    $radius
+	-ms-border-radius:     $radius
+	border-radius:         $radius
 
 	.box
-	  +border-radius(10px)
+	+border-radius(10px)
 						</code>
 					</pre>
 				</section> 
 				<section>
+					<aside class="notes">
+						PATTY
+					</aside>
 					<h3> SCSS </h3>
 					<ul>
 						<li>
@@ -131,7 +167,7 @@
 							encourages more modular code with @extend
 						</li>
 						<li>
-							existing tools often work wiht SCSS
+							existing tools often work with SCSS
 						</li>
 						<li>
 							integration with an existing CSS codebase is much easier
@@ -142,6 +178,9 @@
 					</ul> 
 				</section>
 				<section>
+					<aside class="notes">
+						PATTY
+					</aside>
 					<h3>EXAMPLE</h3>
 					<pre>
 						<code class="sass scss">
@@ -160,18 +199,25 @@
 			<!-- Section 3: Why not use an automatic conversion tool? -->
 			<section>
 				<section>
-				<h3>Why not an automatic <span class="emph">conversion</span> tool?</h3>
+					<aside class="notes">
+						ASHLEY
+					</aside>
+					<h3>Why not an automatic <span class="emph">conversion</span> tool?</h3>
 				</section>
 				<section>
 					<aside class="notes">
-					http://stackoverflow.com/questions/13450355/css-to-sass-or-less-conversion
+						ASHLEY<br>
+						http://stackoverflow.com/questions/13450355/css-to-sass-or-less-conversion
 					</aside>
-				Conversion tools exist that can turn your css files into sass files. They can also format them for into beauitfully tabbed and spaced files, but there isn't a tool that can <span class="emph">refactor</span> your existing CSS into well-structured SASS.
+					<p>Conversion tools exist that can turn your css files into sass files. They can also format them for into beauitfully tabbed and spaced files, but there isn't a tool that can <span class="emph">refactor</span> your existing CSS into well-structured SASS.</p>
 				</section>
 			</section>
 
 			<!-- Section 4: Getting Started -->
 			<section>
+				<aside class="notes">
+					ASHLEY
+				</aside>
 			<h3>Your first <span class="emph">Quest</span></h3>
 			<img src="images/navigate_the_Darkness.gif">
 			<p>We'll help you navigate the darkness and get setup to go</p>
@@ -179,21 +225,28 @@
 			<!-- Section 4.1: Organizing your File Structure -->
 			<section>
 				<section>
-				<h3>Leverage imports and partials</h3> to create a <span class="emph">modularized</span> code base for maintainability
-				</section>
-				<section>
-				<h3>Partials</h3>
-					<!-- TODO: elaborate more on this, PC -->					
 					<aside class="notes">
-						With traditional CSS, modularisation is implemented through classes and ids but SASS allows us to take this idea one step further through the use of functions and partials.
-
-						  - The idea here is that each module/action within the app has their own SASS file.
-						  - The idea is that anything that can made modular should be poosed int a partial so it can be reused anywhere. 
-						  - Inside which only partials and mixins needed for taht module will be imported. Similar to a well structured webapp where only the required functions and classes are imported so performance is optimised.
+					PATTY
 					</aside>
+					<h3>Leverage imports and partials</h3> to create a <span class="emph">modularized</span> code base for maintainability
 				</section>
 				<section>
-				<h3>Be <span class="emph">Structured</span> </h3>
+					<aside class="notes">
+						PATTY <br>
+						With traditional CSS, modularisation is implemented through classes and ids but SASS allows us to take this idea one step further through the use of functions and partials.
+<ul>
+						<li>The idea here is that each module/action within the app has their own SASS file.</li>
+						<li>The idea is that anything that can made modular should be poosed int a partial so it can be reused anywhere. </li>
+						<li>Inside which only partials and mixins needed for taht module will be imported. Similar to a well structured webapp where only the required functions and classes are imported so performance is optimised.</li>
+</ul>
+					</aside>
+					<h3>Partials</h3>
+				</section>
+				<section>
+					<aside class="notes">
+						PATTY
+					</aside>
+					<h3>Be <span class="emph">Structured</span> </h3>
 					<pre>
 						<code class="sass scss">
 /web/sass
@@ -214,15 +267,20 @@
 						</code>
 					</pre>
 					<aside class="notes">
-						PARTIALS:
-
-						you can create partial SASS files that contain little snippets of CSS taht you can include in other SASS files. This is 
-						a great way to modularize your CSS and help keep thigns easier to maintain. A partial is simply a SASS file named with a 
-						leading underscore. The underscore lets SASS know that the file is only a partial file and that it should not be
-						generated into a CSS file. SASS partials are used with the @import directive.
+						PATTY<br>
+						PARTIALS:<ul>
+							<li>you can create partial SASS files that contain little snippets of CSS taht you can include in other SASS files. </li>
+							<li>This is a great way to modularize your CSS and help keep thigns easier to maintain. A partial is simply a SASS file named with a 
+							leading underscore. </li>
+							<li>The underscore lets SASS know that the file is only a partial file and that it should not be generated into a CSS file.</li>
+							<li>SASS partials are used with the @import directive.</li>
+					</ul>
 					</aside>
 				</section>
 				<section>
+					<aside class="notes">
+						PATTY
+					</aside>
 					<h3>@Import</h3>
 					<pre>
 						<code class="sass scss">
@@ -236,7 +294,7 @@
 						</code>
 					</pre>
 					<aside class="notes">
-
+						PATTY <br>
 						IMPORT: 
 
 						CSS has an import ption that lets you split your CSS into smaller, more maintainable portions. The only drawback is that each
@@ -250,10 +308,21 @@
 			</section>
 			<section>
 				<section>
-				Join a <span class="emph">guild</span> called <h3>Compass</h3>
-				<img src="images/compass.jpg">
+					<aside class="notes">
+					ASHLEY<br>
+						<ul>
+							<li>What is compass?</li>
+							<li>Experience cleaner markup without presentational classes.</li>
+							<li>Compass mixins make CSS3 easy</li>
+						</ul>
+					</aside>
+					Join a <span class="emph">guild</span> called <h3>Compass</h3>
+					<img src="images/compass.jpg">
 				</section>
 				<section>
+				<aside class="notes">
+					ASHLEY
+				</aside>
 				<h3>The Compass <span class="emph">Lifestyle</span></h3>
 						<ul>
 							<li>
@@ -278,9 +347,11 @@
 								validate (validate the generated CSS)
 							</li>
 						</ul>
-					<!--4. Patty-->
 				</section>
 				<section>
+					<aside class="notes">
+						ASHLEY
+					</aside>
 					<h3>Example</h3>
 					<pre>
 						<code class="sass scss">
@@ -304,10 +375,16 @@ line_comments = false
 					</pre>
 				</section>
 				<section>
-					TODO: some good ol' compass mixins examples 
+					<aside class="notes">
+						ASHLEY
+					</aside>
+					<h3>Your Compass Toolbox</h3>
 					<img class="compass-img" src="images/tools.gif">
 				</section>
 				<section>
+					<aside class="notes">
+						ASHLEY
+					</aside>
 					<h3> Box Shadow </h3>
 					<pre>
 						<code class="sass scss">
@@ -328,6 +405,10 @@ line_comments = false
 					</pre>
 				</section>
 				<section>
+					<aside class="notes">
+ASHLEY<br>
+Older versions of MS IE have their own special approach to creating opacity and this one line will take care of it all
+</aside>
 					<h3> Opacity </h3>
 					<pre>
 						<code class="sass scss">
@@ -354,6 +435,9 @@ line_comments = false
 					</pre>
 				</section>
 				<section>
+					<aside class="notes">
+						ASHLEY
+					</aside>
 					<h3> Border Radius </h3>
 					<pre>
 						<code class="sass scss">
@@ -382,12 +466,16 @@ line_comments = false
 			</section>
 			<!-- Section: 5: First Pass -->
 			<section>
-			<img class="spellbook-title" src="images/spellbook.png">
-			<div><img class="spellbook-img" src="images/magic_missile.gif"></div>
+				<aside class="notes">
+					ASHLEY
+				</aside>
+				<img class="spellbook-title" src="images/spellbook.png">
+				<div><img class="spellbook-img" src="images/magic_missile.gif"></div>
 			</section>
 			<section>
 				<section>
 					<aside class="notes">
+						PATTY<br>
 						When use variables?<br>
 						Use a variable when you have a single value you'd like to store
 					</aside>
@@ -395,6 +483,9 @@ line_comments = false
 					<p>Colors, Fonts, <span class="emph">etc.</span></p>
 				</section>
 				<section>
+					<aside class="notes">
+						PATTY
+					</aside>
 					<h3>Example</h3>
 					<pre>
 						<code class="sass scss">
@@ -409,14 +500,27 @@ $leagueGothic: league-gothic, arial narrow, sans-serif;
 						</code>
 					</pre>
 				</section>
+				<section>
+					<aside class="notes">
+					PATTY<br>
+					50 shades of grey
+				</aside>
+					COLORS
+				</section>
 			</section>
 			<section>
 				<section>
+					<aside class="notes">
+						ASHLEY
+					</aside>
 					<h3>Nesting</h3>
 					<p>A spell for <span class="emph">organizing</span> and <span class="emph">structuring</span> your code
 				</section>
 				<section>
-				Most importantly it has the power to <span class="emph">stop</span> you from <span class="emph">repeating</span> the same lines over and over.
+					<aside class="notes">
+						ASHLEY
+					</aside>
+					Most importantly it has the power to <span class="emph">stop</span> you from <span class="emph">repeating</span> the same lines over and over.
 					<pre><code class="sass scss">
 .sca-buy-container {
 	@include border-radius(4px);
@@ -435,6 +539,9 @@ $leagueGothic: league-gothic, arial narrow, sans-serif;
 </code></pre>
 				</section>
 				<section>
+					<aside class="notes">
+						ASHLEY
+					</aside>
 				<h3>Beware</h3>
 				<p>Potential <span class="emph">Pit Falls</span> include: </p>
 				<img class="pit-falls-img" src="images/pit_falls.gif">
@@ -443,16 +550,23 @@ $leagueGothic: league-gothic, arial narrow, sans-serif;
 			</section>
 			<section>
 				<section>
+					<aside class="notes">
+						ASHLEY
+					</aside>
 					<h3>URL-Helpers</h3>
 				</section>
 				<section>
 					<aside class="notes">
+						ASHLEY<br>
 						These url helpers isolate your stylesheets from environmental differences.  They allow you to write the same stylesheets and use them locally without a web server, and then change them to using asset hosted in production. They might also insultaet you against some code reorganization changes.
 					</aside>
 					<img class="heart_break_img" src="http://media.giphy.com/media/SIPIe590rx6iA/giphy.gif">
 					<p class="heart_break_words"><span class="emph">Seperate</span> your styelsheets from your environment.</p>
 				</section>
 				<section>
+					<aside class="notes">
+						ASHLEY
+					</aside>
 					<p>Your config.rb file will set up the path to image assets.</p>
 					<pre><code class="sass scss">
 images_dir = "image"
@@ -469,6 +583,7 @@ images_dir = "image"
 			<section>
 				<section>
 					<aside class="notes">
+					PATTY<br>
 					Mixins always compile to CSS rules where they appear in code. Where an @extend generates more selectors, @mixin always generates more rules. 
 					This is why for static rules it is often (not always) less bloaty to use @extend.<br>
 					As a rule of thumb, I only use mixins to do "mathy" things. "If it doesn't need to pass variable, it doesn't need to be a mixin" is my motto
@@ -476,6 +591,9 @@ images_dir = "image"
 					<h3>Mixins</h3>
 				</section>
 				<section>
+					<aside class="notes">
+						PATTY
+					<aside>
 					<h3>Example</h3>
 					<pre>
 						<code class="sass scss">
@@ -497,6 +615,9 @@ images_dir = "image"
 					</pre>
 				</section>
 				<section>
+					<aside class="notes">
+						PATTY
+					</aside>
 					<h3><span class="emph">Another</span> Example</h3>
 					<pre>
 						<code class="sass scss">
@@ -522,7 +643,8 @@ images_dir = "image"
 			<section>
 			<section>
 				<aside class="notes">
-				Use @extend when you want to store multiple static properties and pass them to selectors
+					PATTY <br>
+					Use @extend when you want to store multiple static properties and pass them to selectors
 				</aside>
 					<h3>Extends</h3>
 				</section>
@@ -552,10 +674,16 @@ images_dir = "image"
 			</section>
 			<section>
 				<section>
-				<h3>Mixins vs Extends</h3>
-				While an @extend generates more <span class="emph">selectors</span>, @mixin always generates more <span class="emph">rules</span>.
+					<aside class="notes">
+						PATTY
+					</aside>
+					<h3>Mixins vs Extends</h3>
+					While an @extend generates more <span class="emph">selectors</span>, @mixin always generates more <span class="emph">rules</span>.
 				</section>
 				<section>
+					<aside class="notes">
+						PATTY
+					</aside>
 					<h3>@extend</h3>
 					<pre>
 						<code class="sass scss">
@@ -606,21 +734,28 @@ images_dir = "image"
 					</code>
 					</pre>
 					<aside class="notes">
-Notice: it doesn't "fetch" the style from .boom, instead it commma separates the original selector. It applies the styles to both more efficeintly.
+						PATTY<br>
+					Notice: it doesn't "fetch" the style from .boom, instead it commma separates the original selector. It applies the styles to both more efficeintly.
 
 @mixin fetches an inserts. Though not as efficient it can take parameters and process/use them in the output. 
 
 Note SASS also extends all nested selectors as well:
-					</aside>					
+					</aside>
 				</section>
 			</section>
 			<!-- Section 6: Special Concerns for Enterprise Applications -->
 			<section class="foes">
+				<aside class="notes">
+					ASHLEY
+				</aside>
 				<h3 class="foes-label"><span class="emph">Enterprise </span>Foes</h3>
 				<img class="foes-img" src="images/bowser_fire.gif">
 			</section>
 			<section>
 				<section>
+					<aside class="notes">
+						ASHLEY
+					</aside>
 					<h3>Working with <span class="emph">frameworks</span></h3>
 					<p>Robust frameworks are very popular for larger web applications and introduce a number of hurdles.</p>
 					<img src="images/mario_jump_over_fire.gif">
@@ -628,6 +763,7 @@ Note SASS also extends all nested selectors as well:
 				</section>
 				<section>
 					<aside class="notes">
+						ASHLEY<br>
 						Did not use a theme builder because our designers made up a lot of components. e.g. date picker
 					</aside>
 					Giant Amounts of CSS provided that you will be specifying/writing over
@@ -644,21 +780,29 @@ Note SASS also extends all nested selectors as well:
 			</section>
 			<section>
 				<section>
-				<h3>Mini-<span class="emph">boss</span>:</h3>
-				<h4 style="float: left">Overhauling the look of Framework components</h4>
-				<img src="images/rhino_boss.gif">
-				<h4>Based on a true story</h4>
+					<aside class="notes">
+						ASHLEY
+					</aside>
+					<h3>Mini-<span class="emph">boss</span>:</h3>
+					<h4 style="float: left">Overhauling the look of Framework components</h4>
+					<img src="images/rhino_boss.gif">
+					<h4>Based on a true story</h4>
 				</section>
 				<section>
-				<h3>Designers visited the <span class="emph">magical</span> fairy cave of inspiration</h3>
+					<aside class="notes">
+						ASHLEY
+					</aside>
+					<h3>Designers visited the <span class="emph">magical</span> fairy cave of inspiration</h3>
 					<img src="images/zelda_fairy.gif">
 				</section>
 				<section>
-				<p>They invented the <span class="emph">Batch Picker</span></p>
+					<aside class="notes"> ASHLEY</aside>
+					<p>They invented the <span class="emph">Batch Picker</span></p>
 					<img src="images/batch_picker_dream.png">
 				</section>
 				<section>
 					<aside class="notes">
+						ASHLEY<br>
 						Why Not write our own? <br>
 						It was still worth leveraging the sencha datepicker for the date math, general built-in structure of events that occurred during month navigation and date selection 
 					</aside>
@@ -669,6 +813,7 @@ Note SASS also extends all nested selectors as well:
 				</section>
 				<section>
 					<aside class="notes">
+						ASHLEY <br>
 						We nested 5 times for .x-btn-icon.sca-calendar-img.batch-picker-icon.  It's under
 						.sca-batch-picker<br>
 						.date-display<br>
@@ -707,10 +852,12 @@ Note SASS also extends all nested selectors as well:
 			</section>
 			<section>
 				<section>
-				<h3>We often <span class="emph">Reuse</span> components</h3>
-				<p>But they can be styled completely differently</p>
+					<aside class="notes">PATTY</aside>
+					<h3>We often <span class="emph">Reuse</span> components</h3>
+					<p>But they can be styled completely differently</p>
 				</section>
 				<section class="animate-buttons" >
+					<aside class="notes">PATTY</aside>
 					<p>We leverage top level classes to reskin the same component depending on its usage within the app.</p>
 					<span class="button-container button-one"><div class="button-label">.sca-drive-panel { }</div><img class="button-ex" src="images/button_ex1.png"></span>
 					<span class="button-container button-four"><div class="button-label">.sca-batch-picker { }</div><img class="button-ex" src="images/button_ex4.png"></span>
@@ -721,14 +868,20 @@ Note SASS also extends all nested selectors as well:
 			</section>
 			<section>
 				<section>
+					<aside class="notes"> ASHLEY</aside>
+					<h3>Implementation</h3>
 					1000s of lines of CSS means there's only <span class="emph">two</span> ways to do this
 				</section>
 				<section>
+					<aside class="notes"> ASHLEY</aside>
+					<h3>A Grind</h3>
 					<p>Torturous, never-ending level grind</p>
 					<img src="images/never_ending_8_bit.gif">
 				</section>
 				<section>
+					<h3>A quest chain</h3>
 					<aside class="notes">
+						ASHLEY<br>
 						Point out the date starteda nd the date(s) we were still making SASS conversions on
 					</aside>
 					<p>Make it an <span class="emph">iterative</span> process</p>
@@ -743,6 +896,7 @@ Note SASS also extends all nested selectors as well:
 				</section>
 				-->
 			<section>
+				<aside class="notes">Ashley &mp; Patty</aside>
 				<h3>Boss Drop</h3>
 				<p>Our code is signficantly more <span class="emph">maintainable.</span></p>
 				<img src="images/link_you_win.gif">
