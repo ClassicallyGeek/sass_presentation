@@ -358,7 +358,7 @@ Our Theme: <ul>
 					<h3>Example</h3>
 					<pre>
 						<code class="sass scss">
-							# Require any additional compass plugins here.
+# Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
 http_path = "../"
@@ -792,6 +792,40 @@ images_dir = "image"
 						PATTY
 						Notice: it doesn't "fetch" the style from .boom, instead it commma separates the original selector. It applies the styles to both more efficeintly.
 					</aside>
+				</section>
+								<section>
+					<aside class="notes">
+						PATTY
+					</aside>
+					<h3>Selector Inheritance</h3>
+					<pre>
+						<code class="sass scss">
+.error {
+  border: 1px #f00;
+}
+.error.intrusion {
+  font-size: 1.3em;
+}
+.badError {
+  @extend .error;
+  border-width: 3px;
+}
+						</code>
+					</pre>
+					CSS output:
+					<pre>
+						<code class="sass scss">
+.error, .badError {
+  border: 1px #f00;
+} 
+.error.intrusion, .badError.intrusion {
+  font-size: 1.3em;
+}
+ .badError {
+  border-width: 3px;
+}
+						</code>
+					</pre>
 				</section>
 				<section>
 					<h3>@mixin</h3>
