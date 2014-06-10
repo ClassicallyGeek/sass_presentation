@@ -507,8 +507,94 @@ $leagueGothic: league-gothic, arial narrow, sans-serif;
 					<aside class="notes">
 					PATTY<br>
 					50 shades of grey
-				</aside>
-					COLORS
+					</aside>
+					<h3> Easy </h3>
+					<pre>
+						<code class="sass scss">
+$yellow-green: #b0eb00;
+$red: #b30015;
+$blue: #2a00b3;
+$grey: #595959;
+$dark-grey: #363636;
+$light-grey: #a6a6a6;
+						</code>
+					</pre>
+				</section>
+				<section>
+					<aside class="notes">
+					PATTY<br>
+					50 shades of grey
+					</aside>
+					<h3> Uhhm.. </h3>
+					<pre>
+						<code class="sass scss">
+$grey-lightest: #EEEEEE;
+$grey-lighter-two: #DDDDDD;
+$grey-lighter: #D9D9D9;
+$grey-light: #CCCCCC;
+$grey-med-light: #C4C4C4;
+$grey-med: #999999;
+$grey-med-dark: #666666;
+$grey-dark: #4F4F4F;
+$grey-darkest: #333333;
+						</code>
+					</pre>
+				</section>
+				<section>
+					<aside class="notes">
+					PATTY<br>
+					50 shades of grey
+					</aside>
+					<h3> Abstract Out </h3>
+					<pre>
+						<code class="sass scss">
+$background-color: #b0eb00;
+$error-color: #b30015;
+$anchor-color: #2a00b3;
+$anchor-hover-color: #0077b3;
+						</code>
+					</pre>
+				</section>
+				<section>
+					<aside class="notes">
+					PATTY<br>
+					50 shades of grey
+					</aside>
+					<h3> Getting Creative </h3>
+					<pre>
+						<code class="sass scss">
+$graphite: #999999;
+$slate: #989898;
+$mouse: #A1A1A1;
+$smog: #D0D0D0;
+$smokey: #ECECEC;
+$asphalt: #404040;
+$cement: #A0A0A0;
+$pavement: #A8A8A8;
+$cloud: #F7F7F7;
+$mist: #E4E4E4;
+$elephant: #6E6E6E;
+$chalk: #E2E2E2;
+$evil: #5C5C5C;
+$hippo: #9F9F9F;
+$underline: #D6D6D6;
+$gunk: #CBCBCB;
+						</code>
+					</pre>
+				</section>
+							<section>
+					<aside class="notes">
+					PATTY<br>
+					50 shades of grey
+					</aside>
+					<h3> Also </h3>
+					<pre>
+						<code class="sass scss">
+$grey-light-border: #F4F4F4;
+$grey-med-border: #DDDEDF;
+$grey-dark-border: #B5B8C8;
+						</code>
+					</pre>
 				</section>
 			</section>
 			<section>
@@ -693,19 +779,19 @@ images_dir = "image"
 					<h3>@extend</h3>
 					<pre>
 						<code class="sass scss">
-.boom {
+.test {
 	color: blue;
 }
 
-.pow {
-	@extend boom;
+.test2 {
+	@extend test;
 }
 						</code>
 					</pre>
 					CSS output:
 					<pre>
 						<code class="sass scss">
-. boom, .pow {
+.test, .test2 {
 	color: blue;
 }
 						</code>
