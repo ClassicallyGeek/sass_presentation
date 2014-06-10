@@ -44,11 +44,11 @@
 	<li>Hi Everyone, I'm _____ and this is ____</li>
 	<li>We work at Spanning Cloud Apps</li>
 	<li>Spanning does:</li>
-	<li>We were inspired by our experiencing converting Spanning's flagship application from CSS to SASS</li>
-	<li>We'd like to show what it's like to update a large single page application from css to SASS and some of the things we encountered along the way</li>
+	<li>We were inspired by our experiencing converting Spanning's flagship application from CSS to Sass</li>
+	<li>We'd like to show what it's like to update a large single page application from CSS to Sass and some of the things we encountered along the way</li>
 </ul>
 Structure of our presentation:<ul>
-<li>Brief overview of SASS for those who don't know it</li>
+<li>Brief overview of Sass for those who don't know it</li>
 <li>An overview highlighting the pieces we leveraged for those that do<li>
 <li>A look into the specific issues we had to tackle with an Enterprise app</li>
 </ul>
@@ -118,22 +118,22 @@ Our Theme: <ul>
 						PATTY
 						- Compass
 						- variables were similar
-						- SASS used ruby
+						- Sass used ruby
 						- syntax and structure seemed more intuitive for Sass
 					</aside>
-					<h3>Why <span class="emph">SASS</span> and moreso why <span class="emph">SCSS</span></h3>
+					<h3>Why <span class="emph">Sass</span> and moreso why <span class="emph">SCSS</span></h3>
 				</section>
 				<section>
 					<aside class="notes">
 						PATTY
 					</aside>
-					<h3>SASS</h3>
+					<h3>Sass</h3>
 					<ul>
 						<li>
-							Indented syntax of SASS was inherited from HAML
+							Indented syntax of Sass was inherited from HAML
 						</li>
 						<li>
-							SASS doesn't complain about missing semi-colons
+							Sass doesn't complain about missing semi-colons
 						</li>
 					</ul>
 				</section>
@@ -164,7 +164,7 @@ Our Theme: <ul>
 					<h3> SCSS </h3>
 					<ul>
 						<li>
-							Superset of CSS. Contains all the features of CSS and features of SASS as well
+							Superset of CSS. Contains all the features of CSS and features of Sass as well
 						</li>
 						<li>
 							encourages proper nesting of rules
@@ -215,7 +215,7 @@ Our Theme: <ul>
 						ASHLEY<br>
 						http://stackoverflow.com/questions/13450355/css-to-sass-or-less-conversion
 					</aside>
-					<p>Conversion tools exist that can turn your css files into sass files. They can also format them for into beauitfully tabbed and spaced files, but there isn't a tool that can <span class="emph">refactor</span> your existing CSS into well-structured SASS.</p>
+					<p>Conversion tools exist that can turn your CSS files into sass files. They can also format them for into beauitfully tabbed and spaced files, but there isn't a tool that can <span class="emph">refactor</span> your existing CSS into well-structured Sass.</p>
 				</section>
 			</section>
 
@@ -239,9 +239,9 @@ Our Theme: <ul>
 				<section>
 					<aside class="notes">
 						PATTY <br>
-						With traditional CSS, modularisation is implemented through classes and ids but SASS allows us to take this idea one step further through the use of functions and partials.
+						With traditional CSS, modularisation is implemented through classes and ids but Sass allows us to take this idea one step further through the use of functions and partials.
 <ul>
-						<li>The idea here is that each module/action within the app has their own SASS file.</li>
+						<li>The idea here is that each module/action within the app has their own Sass file.</li>
 						<li>The idea is that anything that can made modular should be poosed int a partial so it can be reused anywhere. </li>
 						<li>Inside which only partials and mixins needed for taht module will be imported. Similar to a well structured webapp where only the required functions and classes are imported so performance is optimised.</li>
 </ul>
@@ -275,11 +275,11 @@ Our Theme: <ul>
 					<aside class="notes">
 						PATTY<br>
 						PARTIALS:<ul>
-							<li>you can create partial SASS files that contain little snippets of CSS taht you can include in other SASS files. </li>
-							<li>This is a great way to modularize your CSS and help keep thigns easier to maintain. A partial is simply a SASS file named with a 
+							<li>you can create partial Sass files that contain little snippets of CSS taht you can include in other Sass files. </li>
+							<li>This is a great way to modularize your CSS and help keep thigns easier to maintain. A partial is simply a Sass file named with a 
 							leading underscore. </li>
-							<li>The underscore lets SASS know that the file is only a partial file and that it should not be generated into a CSS file.</li>
-							<li>SASS partials are used with the @import directive.</li>
+							<li>The underscore lets Sass know that the file is only a partial file and that it should not be generated into a CSS file.</li>
+							<li>Sass partials are used with the @import directive.</li>
 					</ul>
 					</aside>
 				</section>
@@ -303,8 +303,8 @@ Our Theme: <ul>
 						PATTY <br>						
 						IMPORT: 
 						CSS has an import option that lets you split your CSS into smaller, more maintainable portions. The only drawback is that each
-						time you use @imporrt in CSS it creates another HTTP request. SASS bulds on top of the current CSS @import but instead of
-						requiring an HTTP request, SASS will take the file you want to import and combine it with the file you're importing into
+						time you use @imporrt in CSS it creates another HTTP request. Sass bulds on top of the current CSS @import but instead of
+						requiring an HTTP request, Sass will take the file you want to import and combine it with the file you're importing into
 						so you can serve a single CSS file to the web broweser.
 					</aside>
 				</section>
@@ -745,7 +745,7 @@ images_dir = "image"
 					<aside class="notes">
 						PATTY<br>
 @mixin fetches and inserts. Though not as efficient it can take parameters and process/use them in the output. 
-Note SASS also extends all nested selectors as well:
+Note Sass also extends all nested selectors as well:
 					</aside>
 				</section>
 			</section>
@@ -888,7 +888,7 @@ Note SASS also extends all nested selectors as well:
 					<h3>A quest chain</h3>
 					<aside class="notes">
 						ASHLEY<br>
-						Point out the date starteda nd the date(s) we were still making SASS conversions on
+						Point out the date starteda nd the date(s) we were still making Sass conversions on
 					</aside>
 					<p>Make it an <span class="emph">iterative</span> process</p>
 					<img class="branch_history" src="images/branch_history.png">
